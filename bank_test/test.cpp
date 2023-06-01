@@ -20,3 +20,14 @@ TEST_F(AccountFixture, Withdraw) {
 	account.Withdraw(600);
 	EXPECT_EQ(9400, account.getBalance());
 }
+
+TEST_F(AccountFixture, cinterest) {
+	account.setinterest(5);
+	account.cinterest(2);
+	EXPECT_EQ(11025, account.getBalance());
+}
+
+TEST_F(AccountFixture, setter) {
+	account.setinterest(1);
+	EXPECT_EQ(1, account.getinterest());
+}
